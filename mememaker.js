@@ -24,7 +24,7 @@
   * Loads the existing meme options into the drop down list
   */
   function loadOptions() {
-    let url = "http://meme-maker-quinnlawson.herokuapp.com/?mode=names";
+    let url = "https://meme-maker-quinnlawson.herokuapp.com/?mode=names";
     fetch(url)
       .then(checkStatus)
       .then(function(responseText) {
@@ -52,7 +52,7 @@
   function changeMeme() {
     let name = document.getElementById("meme-template-selector").value;
 
-    let url = "http://meme-maker-quinnlawson.herokuapp.com/?mode=url&name=" + name;
+    let url = "https://meme-maker-quinnlawson.herokuapp.com/?mode=url&name=" + name;
     document.getElementById("url").value = "";
     document.getElementById("temp-controls-1").style.display = "none";
     maxTextWidth = 0;
@@ -88,7 +88,7 @@
   * @param {object} name the name of the meme template to load the fields for
   */
   function loadTextPointFields(name) {
-    let url = "http://meme-maker-quinnlawson.herokuapp.com/?mode=textPoints&name=" + name;
+    let url = "https://meme-maker-quinnlawson.herokuapp.com/?mode=textPoints&name=" + name;
     let textPointDiv = document.getElementById("text-point-fields");
 
     textPointDiv.innerHTML = "";
@@ -166,7 +166,7 @@
         body : JSON.stringify(message)
     };
 
-    let url = "http://meme-maker-quinnlawson.herokuapp.com/";
+    let url = "https://meme-maker-quinnlawson.herokuapp.com/";
     fetch(url, fetchOptions)
       .then(checkStatus)
       .then(function(responseText) {
@@ -201,7 +201,7 @@
     let canvas = document.getElementById("meme-canvas");
     let context = canvas.getContext("2d");
 
-    let url = "http://meme-maker-quinnlawson.herokuapp.com/?mode=url&name=" + name;
+    let url = "https://meme-maker-quinnlawson.herokuapp.com/?mode=url&name=" + name;
     context.clearRect(0, 0, canvas.width, canvas.height);
     fetch(url)
       .then(checkStatus)
@@ -305,7 +305,7 @@
           body : JSON.stringify(message)
       };
 
-      let url = "http://meme-maker-quinnlawson.herokuapp.com/";
+      let url = "https://meme-maker-quinnlawson.herokuapp.com/";
       fetch(url, fetchOptions)
         .then(checkStatus)
         .then(function(responseText) {
@@ -461,7 +461,7 @@
     document.getElementById("content").style.display = "none";
     document.getElementById("gallery").style.display = "block";
     document.getElementById("gallery-content").innerHTML = "";
-    let url = "http://meme-maker-quinnlawson.herokuapp.com/?mode=memes";
+    let url = "https://meme-maker-quinnlawson.herokuapp.com/?mode=memes";
     fetch(url)
       .then(checkStatus)
       .then(function(responseText) {
@@ -470,13 +470,13 @@
         for(let i = 0; i < memes.length; i++) {
           let fields = memes[i].split("|");
 
-          url = "http://meme-maker-quinnlawson.herokuapp.com/?mode=textPoints&name=" + fields[0];
+          url = "https://meme-maker-quinnlawson.herokuapp.com/?mode=textPoints&name=" + fields[0];
           fetch(url)
             .then(checkStatus)
             .then(function(responseText2) {
               let textPoints = JSON.parse(responseText2).textPoints;
 
-              url = "http://meme-maker-quinnlawson.herokuapp.com/?mode=url&name=" + fields[0];
+              url = "https://meme-maker-quinnlawson.herokuapp.com/?mode=url&name=" + fields[0];
               fetch(url)
                 .then(checkStatus)
                 .then(function(responseText3) {
