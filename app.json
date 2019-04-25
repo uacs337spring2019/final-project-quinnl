@@ -1,0 +1,8 @@
+{
+"name": "Meme Maker",
+"description": "A meme generator made using Node JS",
+"repository": "https://github.com/uacs337spring2019/final-project-quinnl",
+"logo": "https://rawgit.com/heroku/node-js-sample/master/public/node.svg"
+,
+"keywords": ["node", "express", "static"]
+}
