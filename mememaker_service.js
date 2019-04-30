@@ -4,7 +4,7 @@ const fs = require("fs");
 const bodyParser = require('body-parser');
 const jsonParser = bodyParser.json();
 
-app.use(express.static(__dirname));
+app.use(express.static('public'));
 
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
