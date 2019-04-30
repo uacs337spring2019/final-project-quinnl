@@ -124,8 +124,8 @@ app.post('/', jsonParser, function(req, res) {
   }
 });
 
-app.get('/index.html', function(req, res) {
-res.sendFile(__dirname + "/" + "index.html");
+app.get('/mememaker.html', function(req, res) {
+res.sendFile(__dirname + "/" + "mememaker.html");
 });
 
 app.get('/mememaker.css', function(req, res) {
