@@ -24,7 +24,7 @@
   * Loads the existing meme options into the drop down list
   */
   function loadOptions() {
-    let url = "https://final-project-quinnl.herokuapp.com:process.env.PORT/?mode=names";
+    let url = "https://final-project-quinnl.herokuapp.com/?mode=names";
     fetch(url)
       .then(checkStatus)
       .then(function(responseText) {
@@ -52,7 +52,7 @@
   function changeMeme() {
     let name = document.getElementById("meme-template-selector").value;
 
-    let url = "https://final-project-quinnl.herokuapp.com:process.env.PORT/?mode=url&name=" + name;
+    let url = "https://final-project-quinnl.herokuapp.com/?mode=url&name=" + name;
     document.getElementById("url").value = "";
     document.getElementById("temp-controls-1").style.display = "none";
     maxTextWidth = 0;
@@ -88,7 +88,7 @@
   * @param {object} name the name of the meme template to load the fields for
   */
   function loadTextPointFields(name) {
-    let url = "https://final-project-quinnl.herokuapp.com:process.env.PORT/?mode=textPoints&name=" + name;
+    let url = "https://final-project-quinnl.herokuapp.com/?mode=textPoints&name=" + name;
     let textPointDiv = document.getElementById("text-point-fields");
 
     textPointDiv.innerHTML = "";
@@ -166,7 +166,7 @@
         body : JSON.stringify(message)
     };
 
-    let url = "https://final-project-quinnl.herokuapp.com:process.env.PORT/";
+    let url = "https://final-project-quinnl.herokuapp.com/";
     fetch(url, fetchOptions)
       .then(checkStatus)
       .then(function(responseText) {
@@ -201,7 +201,7 @@
     let canvas = document.getElementById("meme-canvas");
     let context = canvas.getContext("2d");
 
-    let url = "https://final-project-quinnl.herokuapp.com:process.env.PORT/?mode=url&name=" + name;
+    let url = "https://final-project-quinnl.herokuapp.com/?mode=url&name=" + name;
     context.clearRect(0, 0, canvas.width, canvas.height);
     fetch(url)
       .then(checkStatus)
@@ -305,7 +305,7 @@
           body : JSON.stringify(message)
       };
 
-      let url = "https://final-project-quinnl.herokuapp.com:process.env.PORT/";
+      let url = "https://final-project-quinnl.herokuapp.com/";
       fetch(url, fetchOptions)
         .then(checkStatus)
         .then(function(responseText) {
@@ -461,7 +461,7 @@
     document.getElementById("content").style.display = "none";
     document.getElementById("gallery").style.display = "block";
     document.getElementById("gallery-content").innerHTML = "";
-    let url = "https://final-project-quinnl.herokuapp.com:process.env.PORT/?mode=memes";
+    let url = "https://final-project-quinnl.herokuapp.com/?mode=memes";
     fetch(url)
       .then(checkStatus)
       .then(function(responseText) {
@@ -470,13 +470,13 @@
         for(let i = 0; i < memes.length; i++) {
           let fields = memes[i].split("|");
 
-          url = "https://final-project-quinnl.herokuapp.com:process.env.PORT/?mode=textPoints&name=" + fields[0];
+          url = "https://final-project-quinnl.herokuapp.com/?mode=textPoints&name=" + fields[0];
           fetch(url)
             .then(checkStatus)
             .then(function(responseText2) {
               let textPoints = JSON.parse(responseText2).textPoints;
 
-              url = "https://final-project-quinnl.herokuapp.com:process.env.PORT/?mode=url&name=" + fields[0];
+              url = "https://final-project-quinnl.herokuapp.com/?mode=url&name=" + fields[0];
               fetch(url)
                 .then(checkStatus)
                 .then(function(responseText3) {
