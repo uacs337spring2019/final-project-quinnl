@@ -4,11 +4,7 @@ const fs = require("fs");
 const bodyParser = require('body-parser');
 const jsonParser = bodyParser.json();
 
-if (process.env.NODE_ENV === 'production') {
-	app.use(express.static('client/build'));
-}
-
-app.use(express.static('public'));
+app.use(express.static(__dirname));
 
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
@@ -128,8 +124,16 @@ app.post('/', jsonParser, function(req, res) {
   }
 });
 
-app.get('*', (request, response) => {
-	response.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+app.get('/index.html', function(req, res) {
+res.sendFile(__dirname + "/" + "index.html");
+});
+
+app.get('/mememaker.css', function(req, res) {
+res.sendFile(__dirname + "/" + "mememaker.css");
+});
+
+app.get('/mememaker.js', function(req, res) {
+res.sendFile(__dirname + "/" + "mememaker.js");
 });
 
 app.listen(process.env.PORT);
