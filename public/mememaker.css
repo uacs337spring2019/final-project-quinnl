@@ -1,0 +1,103 @@
+body {
+  background-color: gray;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+#meme-canvas {
+  background-color: white;
+  background-size: 100% 100%;
+}
+
+h1 {
+  text-align: center;
+}
+
+#meme {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#controls {
+  text-align: center;
+}
+
+#content {
+  text-align: center;
+}
+
+#load-template, #create-template {
+  display: inline-block;
+}
+
+#temp-controls-1, #temp-controls-2 {
+  display: none;
+}
+
+#temp-controls-1 {
+  margin-top: 10px;
+  text-align: left;
+}
+
+#url-div {
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+#template-name-div {
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+#text-point-fields div {
+  margin-top: 10px;
+  text-align: left;
+}
+
+#text-point-fields div button, #selector button {
+  float: right;
+  margin-left: 10px;
+}
+
+#create-template {
+  vertical-align: top;
+}
+
+#temp-controls-2 p {
+  text-align: left;
+}
+
+#done {
+  float: left;
+}
+
+#gallery {
+  display: none;
+}
+
+#gallery h2 {
+  text-align: center;
+}
+
+#show-gallery-button, #show-content-button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+
+#show-gallery, #show-content {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+
+.gallery-image {
+  border: 2px double black;
+  margin: 60px;
+}
+
+#temp-controls-2 p {
+  font-weight: bold;
+}
