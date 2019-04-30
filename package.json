@@ -3,7 +3,7 @@
   "version": "1.0.0",
    "engines": {
     "node": "10.15.3"
-  }
+  },
   "description": "A meme generator developed using node js",
   "main": "mememaker_service.js",
   "dependencies": {
