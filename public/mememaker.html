@@ -1,1 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Meme Maker</title>
+    <link rel="stylesheet" type="text/css" href="mememaker.css" />
+    <script type="text/javascript" src="mememaker.js"></script>
+  </head>
+  <body>
+    <h1>Meme Maker</h1>
+    <div id="content">
+        <div id="meme">
+          <canvas width="500" height="500" id="meme-canvas"></canvas>
+        </div>
+        <div id="controls">
+          <button id="show-gallery">Go to Gallery</button>
+          <fieldset id="load-template">
+            <legend>Load Template / Create Meme</legend>
+            <div id="selector">
+              <select id="meme-template-selector">
+              </select><button id="choose-template">Choose</button>
+            </div>
+            <div id="text-point-fields">
+            </div>
+          </fieldset>
+          <fieldset id="create-template">
+            <legend>Create Template</legend>
+            <div id="url-div">
+              <label>Image URL: <input id="url" type="text" /></label>
+              <button id="load-image">Load Image</button>
+            </div>
+            <div id="template-name-div">
+              <label>Template Name: <input id="template-name" type="text" /></label>
+            </div>
+            <div id="temp-controls-1">
+              <button id="create-text">Create Text</button>
+              <button id="clear-text">Clear Text</button>
+              <button id="save-template">Save Template</button>
+            </div>
+            <div id="temp-controls-2">
+              <p>Click on the canvas to designate where text should go!<br />
+                Click done when you're finished.</p>
+              <button id="done">Done</button>
+            </div>
+          </fieldset>
+        </div>
+    </div>
+    <div id="gallery">
+      <h2>Gallery</h2>
+      <button id="show-content">Go to Meme/Template Maker</button>
+      <div id="gallery-content">
 
+      </div>
+    </div>
+  </body>
+</html>
