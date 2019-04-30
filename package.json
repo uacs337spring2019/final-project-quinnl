@@ -1,20 +1,18 @@
 {
   "name": "final_project",
   "version": "1.0.0",
-  "description": "A meme generator developed in Node JS",
+  "description": "A meme generator developed using node js",
   "main": "mememaker_service.js",
   "dependencies": {
-    "client-sessions": "^0.8.0",
-    "cookie-parser": "^1.4.4",
+    "body-parser": "1.19.0",
     "express": "^4.16.4",
-    "fs": "^0.0.1-security",
-    "mysql": "^2.17.0"
-   },
+    "fs": "^0.0.1-security"
+  },
   "devDependencies": {},
   "scripts": {
-    "start": "node mememaker_service.js"
-    "test": "echo \"Error: no test specified\" && exit 1"
-},
+    "test": "echo \"Error: no test specified\" && exit
+    1"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/uacs337spring2019/final-project-quinnl.git"
@@ -22,10 +20,10 @@
   "keywords": [
     "example"
   ],
-  "author": "Quinn",
+  "author": "Quinn Lawson",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/uacs337spring2019/final-project-quinnl/issues"
   },
-  "homepage": "https://github.com/uacs337spring2019/final-project-quinnl/mememaker_service.js"
+  "homepage": "https://github.com/uacs337spring2019/final-project-quinnl#readme"
 }
